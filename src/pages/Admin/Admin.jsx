@@ -22,7 +22,7 @@ export default function Admin() {
   const [activeTab, setActiveTab] = useState("overview");
 
   // Mock Admin-only metrics
-  const totalRevenue = 4250000 + bookings.reduce((sum, b) => sum + b.total, 0) + foodOrders.reduce((sum, o) => sum + o.total, 0);
+  const totalRevenue = 4250000 + bookings.reduce((sum, b) => sum + (b.total || b.amount || b.price || 0), 0) + foodOrders.reduce((sum, o) => sum + (o.total || o.amount || 0), 0);
   const occupancyRate = 85; // 85%
   const pendingOrders = foodOrders.filter(o => o.status !== 'Delivered').length;
 
@@ -299,7 +299,7 @@ export default function Admin() {
                           <td>{booking.roomName}</td>
                           <td>{booking.checkIn} to {booking.checkOut}</td>
                           <td>{booking.guests} Guests</td>
-                          <td>₹{booking.total.toLocaleString('en-IN')}</td>
+                          <td>₹{(booking.total || booking.amount || booking.price || 0).toLocaleString('en-IN')}</td>
                           <td>
                             <div style={{ display: 'flex', gap: '8px' }}>
                               <button onClick={() => handleApproveStay(booking.id)} className={styles.actionBtnCheck} title="Verify Stay"><Check size={14} /></button>
@@ -416,7 +416,7 @@ export default function Admin() {
                           <td>
                             {order.items.map(item => `${item.name} (x${item.quantity})`).join(', ')}
                           </td>
-                          <td>₹{order.total.toLocaleString('en-IN')}</td>
+                          <td>₹{(order.total || order.amount || 0).toLocaleString('en-IN')}</td>
                           <td>
                             <span className={`${styles.badge} ${order.status === 'Delivered' ? styles.badgeDelivered : styles.badgeUpcoming}`}>
                               {order.status || 'Pending'}

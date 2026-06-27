@@ -123,6 +123,9 @@
   .splitGrid {
     grid-template-columns: 1fr;
   }
+  .sidebar {
+    position: static;
+  }
 }
 
 .leftCol {
