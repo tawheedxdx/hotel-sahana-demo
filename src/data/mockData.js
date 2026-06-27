@@ -360,7 +360,7 @@ export const mockDashboardData = {
       checkOut: "2026-07-18",
       guests: "2 Adults",
       status: "Confirmed",
-      amount: 126000,
+      total: 126000,
       image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=300&q=80"
     },
     {
@@ -370,7 +370,7 @@ export const mockDashboardData = {
       checkOut: "2026-08-04",
       guests: "2 Adults",
       status: "Pending Payment",
-      amount: 29000,
+      total: 29000,
       image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=300&q=80"
     }
   ],
