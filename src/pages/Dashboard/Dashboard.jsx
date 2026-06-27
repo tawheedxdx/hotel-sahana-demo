@@ -145,7 +145,7 @@ export default function Dashboard() {
                     </div>
                     <div className={styles.detailItem}>
                       <span className={styles.detailLabel}>Amount Paid</span>
-                      <span className={styles.detailVal}>₹{booking.total.toLocaleString('en-IN')}</span>
+                      <span className={styles.detailVal}>₹{(booking.total || booking.amount || booking.price || 0).toLocaleString('en-IN')}</span>
                     </div>
                   </div>
 
@@ -284,7 +284,7 @@ export default function Dashboard() {
                       Charged to checkout account
                     </span>
                     <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--color-primary)' }}>
-                      ₹{order.total.toLocaleString('en-IN')}
+                      ₹{(order.total || order.amount || 0).toLocaleString('en-IN')}
                     </span>
                   </div>
                 </div>

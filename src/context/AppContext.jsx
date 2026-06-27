@@ -37,7 +37,7 @@ export const AppProvider = ({ children }) => {
       ...bookingData
     };
     setBookings(prev => [newBooking, ...prev]);
-    setUser(prev => ({ ...prev, points: prev.points + Math.floor(newBooking.total / 10) }));
+    setUser(prev => ({ ...prev, points: prev.points + Math.floor(newBooking.amount / 10) }));
     addNotification(`Your booking for ${newBooking.roomName} has been confirmed.`, "booking");
     return newBooking;
   };
