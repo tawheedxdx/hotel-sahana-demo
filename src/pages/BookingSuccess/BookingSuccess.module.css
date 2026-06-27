@@ -1,0 +1,181 @@
+.container {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow-heavy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.iconContainer {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-round);
+  background-color: rgba(212, 175, 55, 0.1);
+  border: 2px solid var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary);
+  animation: scaleUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.title {
+  font-size: 2.25rem;
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.receipt {
+  width: 100%;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background-color: #fcfcfc;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.receiptTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.refId {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.receiptGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 480px) {
+  .receiptGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.receiptItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.receiptLabel {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.receiptVal {
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.receiptTotalRow {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+  padding-top: 16px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+/* Culinary items list for order types */
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 16px;
+}
+
+.foodItemRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+  }
+}
+
+.primaryBtn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-grow: 1;
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-grow: 1;
+}
+
+.secondaryBtn:hover {
+  background-color: var(--color-primary);
+  color: white;
+}

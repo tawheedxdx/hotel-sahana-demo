@@ -1,0 +1,238 @@
+.hero {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 24px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--color-primary);
+}
+
+.heroBg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(7, 21, 38, 0.4) 0%, rgba(7, 21, 38, 0.8) 100%);
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  font-weight: 300;
+}
+
+/* Split Grid */
+.splitGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 900px) {
+  .splitGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoCard {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.infoTitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 12px;
+}
+
+.infoItem {
+  display: flex;
+  gap: 16px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.infoIcon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.infoVal {
+  color: var(--color-text-muted);
+}
+
+/* Form Card */
+.formCard {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow-heavy);
+  background-color: white;
+}
+
+.formTitle {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.formDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.colSpan {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .colSpan {
+    grid-column: span 1;
+  }
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fcfcfc;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-secondary);
+  background-color: white;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+.submitBtn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.successBox {
+  padding: 40px;
+  text-align: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow-heavy);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.successIcon {
+  color: var(--color-secondary);
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-round);
+  background-color: rgba(212, 175, 55, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}

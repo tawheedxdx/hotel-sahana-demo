@@ -1,0 +1,89 @@
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at center, #0b1f3a 0%, #071526 100%);
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=1920&q=40');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  filter: grayscale(40%) blur(4px);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+  width: 100%;
+  padding: 60px 40px;
+  border-radius: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4) !important;
+}
+
+.errorNum {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  color: var(--color-secondary);
+  line-height: 1;
+  display: block;
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.goldDivider {
+  width: 60px;
+  height: 2px;
+  background: var(--color-secondary);
+  margin: 0 auto 24px auto;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.actions a {
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}

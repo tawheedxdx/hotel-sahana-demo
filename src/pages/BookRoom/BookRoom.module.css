@@ -1,0 +1,223 @@
+.container {
+  padding-top: 140px;
+  padding-bottom: 80px;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1.8fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .splitGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formCard {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow-heavy);
+  background-color: white;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 10px;
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.colSpan {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .colSpan {
+    grid-column: span 1;
+  }
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fcfcfc;
+}
+
+.input:focus,
+.select:focus {
+  border-color: var(--color-secondary);
+  background-color: white;
+}
+
+/* Points slider checkbox */
+.pointsBox {
+  background-color: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-top: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pointsCheckbox {
+  margin-top: 3px;
+  accent-color: var(--color-secondary);
+}
+
+.pointsTitle {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.88rem;
+}
+
+.pointsDesc {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+/* Summary Sidebar */
+.sidebar {
+  position: sticky;
+  top: 120px;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow-heavy);
+  background-color: white;
+}
+
+.roomPreview {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 20px;
+}
+
+.roomImg {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.roomInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.roomName {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.roomType {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.summaryMath {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mathRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--color-text-dark);
+}
+
+.mathRowDiscount {
+  color: #10B981;
+  font-weight: 600;
+}
+
+.mathTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  margin-top: 24px;
+}
+
+.submitBtn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+}
+
+.securityNote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-top: 16px;
+}

@@ -1,0 +1,40 @@
+.cursor {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+  z-index: 100000;
+  transition: width 0.25s, height 0.25s, background-color 0.25s;
+}
+
+.ring {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--color-secondary);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: none;
+  z-index: 99999;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              height 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 0.3s, 
+              background-color 0.3s;
+}
+
+/* Hover States */
+.cursorHover {
+  width: 4px;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.ringHover {
+  width: 48px;
+  height: 48px;
+  border-color: #ffffff;
+  background-color: rgba(212, 175, 55, 0.18);
+}
